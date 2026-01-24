@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Der Redefluss</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Redefluss">
+</head>
+<body>
+
+    <header>
+        <div class="app-title-container">
+            <span class="flag">🇨🇭</span> 
+            <h2 class="app-title">Der <span>Redefluss</span></h2>
+            <button class="info-btn" id="openInfo">i</button>
+        </div>
+
+        <div class="header-right">
+            <select id="langSelect">
+                <option value="ua">🇺🇦 UA</option>
+                <option value="tr">🇹🇷 TR</option>
+                <option value="so">🇸🇴 SO</option>
+                <option value="fa">🇮🇷 FA</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="grid">
+        <button class="cat-btn active" data-cat="pro">💡 Vorschläge</button>
+        <button class="cat-btn" data-cat="agr">✅ Zustimmung</button>
+        <button class="cat-btn" data-cat="ref">❌ Ablehnung</button>
+        <button class="cat-btn" data-cat="con">🔄 Alternative</button>
+        <button class="cat-btn" data-cat="add">➕ Bausteine</button>
+        <button class="cat-btn" data-cat="ask">❓ Fragen</button>
+    </div>
+
+    <div class="card-container">
+        <div class="card" id="mainCard">
+            <div id="de">Lade...</div>
+            <div id="trans">...</div>
+        </div>
+    </div>
+
+    <div class="footer-area">
+        <p class="hint" id="hint-text">Натисни для перекладу</p>
+        <button class="next-btn" id="nextBtn">Nächste →</button>
+    </div>
+
+    <div id="infoModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeInfo">&times;</span>
+            
+            <div id="info-ua" class="info-section active">
+                <div class="modal-header-text">
+                    <h3>🗣️ Der <span>Redefluss</span></h3>
+                </div>
+                <p class="modal-block">
+                    🎯 <b>Мета:</b> Довести вживання розмовних німецьких фраз до автоматизму. Тренажер допоможе вам позбутися мовного бар’єру, навчить миттєво реагувати на пропозиції та вільно вести діалог у стилі мешканців Цюриха і не тільки)))
+                </p>
+                <h4 class="modal-subtitle">📖 Як користуватися:</h4>
+                <ul>
+                    <li><b>Оберіть тему:</b> Натисніть на одну з кнопок зверху.</li>
+                    <li><b>Вимовляйте вголос:</b> Це допоможе швидше звикнути до звучання мови.</li>
+                    <li><b>Перевірте себе:</b> Натисніть на картку, щоб побачити переклад.</li>
+                    <li><b>Тренуйтеся щодня:</b> Навіть 5 хвилин допоможуть покращити ваш Redefluss.</li>
+                </ul>
+                <p class="modal-tip">
+                    💡 <b>Порада:</b> Намагайтеся уявляти конкретну ситуацію, у якій ви могли б сказати цю фразу.
+                </p>
+            </div>
+
+            <div id="info-tr" class="info-section">
+                <h3>🗣️ Der Redefluss</h3>
+                <p><b>Hedef:</b> Almanca konuşma kalıplarını otomatiğe bağlamak.</p>
+                <h4>📖 Nasıl Kullanılır:</h4>
+                <ul>
+                    <li><b>Konu seçin:</b> Üstteki düğmeler kategoriyi değiştirir.</li>
+                    <li><b>Yüksek sesle söyleyin:</b> Cümleyi sesli okuyun.</li>
+                    <li><b>Kontrol edin:</b> Çeviri için karta dokunun.</li>
+                </ul>
+            </div>
+
+            <div id="info-so" class="info-section">
+                <h3>🗣️ Der Redefluss</h3>
+                <p><b>Hadafka:</b> In weedhaha Jarmalka laga dhigo kuwo maskaxda si toos ah ugu jira.</p>
+                <h4>📖 Sida loo isticmaalo:</h4>
+                <ul>
+                    <li><b>Dooro mawduuc:</b> Taabo badhamada sare.</li>
+                    <li><b>Akhri:</b> Isku day inaad kor u dhawaaqdo.</li>
+                    <li><b>Hubi:</b> Taabo kaarka si aad u aragto turjumaada.</li>
+                </ul>
+            </div>
+
+            <div id="info-fa" class="info-section rtl">
+                <h3>🗣️ روانی کلام (Der Redefluss)</h3>
+                <p><b>هدف:</b> خودکارسازی استفاده از عبارات محاوره‌ای آلمانی.</p>
+                <h4>📖 روش استفاده:</h4>
+                <ul>
+                    <li><b>انتخاب موضوع:</b> دکمه‌های بالا.</li>
+                    <li><b>خواندن:</b> با صدای بلند بخوانید.</li>
+                    <li><b>خودآزمایی:</b> برای ترجمه ضربه بزنید.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
