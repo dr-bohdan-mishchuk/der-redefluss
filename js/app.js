@@ -61,7 +61,7 @@ function render() {
   
   const item = list[currentIndex];
 
-  deEl.textContent = item.de;
+  deEl.innerHTML = item.de;
   transEl.textContent = item.t[currentLang] || item.t['ua'];
   
   // Сховати переклад при зміні картки
